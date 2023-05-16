@@ -38,7 +38,7 @@ public class Game {
 	}
 	
 	Game(){
-		this.image = "./images/nihonn.gif";
+		this.image = "./images/nihonn.jpg";
 		this.name = "日本";
 		this.choice1 = "韓国";
 		this.choice2 = "日本";

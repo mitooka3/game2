@@ -37,7 +37,7 @@ public class GameController {
 		
 		mv.setViewName("game2");
 		mv.addObject("mondai", mondai);
-		System.out.println(mondai.getChoice1());
+		System.out.println(mondai.getImg());
 		
 		return mv;
 	}
@@ -45,7 +45,7 @@ public class GameController {
 	@PostMapping("/answer")
 	public ModelAndView answer(int answer,ModelAndView mv) {
 		mondai = (Game)session.getAttribute("mondai");
-		System.out.println(mondai.getChoice2());
+		System.out.println(mondai.getImg());
 		@SuppressWarnings("unchecked")
 		List<History> histories = (List<History>)session.getAttribute("histories");
 		if (histories == null) {
