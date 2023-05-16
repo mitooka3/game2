@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeaf.org">
+<head>
+<meta charset="UTF-8">
+<title>数あてゲーム here</title>
+<style>
+th,td{
+	border : solid 1px;}
+title{
+	border-collepse:collapse;}
+</style>
+</head>
+<body>
+	<h1>国旗当てゲーム</h1>
+	<form action="/answer" method="post" th:each="h:${mondai}">
+		<img th:src="@{h.image}">
+		
+		<p>
+			<button type='submit' name='answer' value='1'><span th:text="${h.choice1}"></span></button>
+		</p>
+		<p>
+			<button type='submit' name='answer' value='2'><span th:text="${h.choice2}"></span></button>
+		</p>
+		<p>
+			<button type='submit' name='answer' value='3'><span th:text="${h.choice3}"></span></button>
+		</p>
+		<p>
+			<button type='submit' name='answer' value='4'><span th:text="${h.choice4}"></span></button>
+		</p>
+		
+	</form>
+		
+	<hr>
+	
+	<p>
+		<a href="/">もう一度最初から</a>
+	</p>
+
+</body>
+</html>

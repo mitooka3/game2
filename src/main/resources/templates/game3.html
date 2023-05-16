@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeaf.org">
+<head>
+<meta charset="UTF-8">
+<title>数あてゲーム here</title>
+<style>
+th,td{
+	border : solid 1px;}
+title{
+	border-collepse:collapse;}
+</style>
+</head>
+<body>
+	<h1>国旗当てゲーム</h1>
+	<hr>
+	<div >
+  		
+	</div>
+	<form action="/challenge" method="get" th:object="${histories}">
+	
+		<h2><span th:value="${comment}"></span></h2>
+		
+		<p>
+			<input type="submit"  value="次の問題"></input>
+		</p>
+	</form>
+
+	<hr>
+	<hr>
+	<table>
+	
+		<tr>
+			<th>回数</th>
+			<th>結果</th>
+		</tr>
+		<tr th:each="h:${histories}">
+			<td th:text="${h.seq}"></td>
+			<td th:text="${h.result}"></td>
+			
+		</tr>
+	</table>
+	
+	<p>
+		<a href="/">もう一度最初から</a>
+	</p>
+	
+</body>
+</html>
