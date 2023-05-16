@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeaf.org">
 <head>
 <meta charset="UTF-8">
-<title>数あてゲーム here</title>
+<title>国旗当てゲーム</title>
 <style>
 th,td{
 	border : solid 1px;}
@@ -11,7 +11,7 @@ title{
 </style>
 </head>
 <body>
-	<h1>国旗当てゲーム</h1>
+	<h1>★・・国旗当てゲーム・・★</h1>
 	<form action="/answer" method="post" th:each="h:${mondai}">
 		<img th:src="@{h.image}">
 		

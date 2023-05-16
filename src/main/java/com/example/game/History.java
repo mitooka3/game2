@@ -8,7 +8,7 @@ import lombok.Getter;
 @Getter
 public class History {
 	private int seq;
-	private String comment;
+	//private String comment;
 	//private int yourAnswer;
 	private String result;
 
